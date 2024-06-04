@@ -1,18 +1,21 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'JavaScript Action'
+description: 'Adds PR changes as comments'
+author: 'Nik'
 
 # Define your inputs here.
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  owner:
+    description: 'Owner of the repository'
     required: true
-    default: '1000'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: 'Your output description here'
+  repo:
+    description: 'Repository name'
+    required: true
+  pr_number:
+    description: 'Pull request number'
+    required: true
+  token:
+    description: 'GitHub token'
+    required: true
 
 runs:
   using: node20
